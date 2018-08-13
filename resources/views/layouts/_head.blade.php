@@ -164,7 +164,7 @@
 		background: white;
 	}
 	.github{
-		background-image: url() no-repeat;
+		fill: white;
 	}
 	.grey-input{
 		background-color: #8888;
@@ -249,6 +249,9 @@
 	}
 	.mt-2{
 		margin-top: 20px !important;
+	}
+	.mb-1{
+		margin-bottom: 10px !important;
 	}
 	.mb-2{
 		margin-bottom: 20px !important;
