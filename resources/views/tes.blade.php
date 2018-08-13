@@ -55,7 +55,10 @@
 	          </ul>
 	        </li>
 	        <li class="dropdown">
-	          <a href="#" class="dropdown-toggle HeaderNavlink" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img alt="@adiyani17a" class="avatar float-left mr-1" src="https://avatars1.githubusercontent.com/u/37235189?s=40&amp;v=4" height="20" width="20"><span class="dropdown-caret white"></span></a>
+	          <a href="#" class="dropdown-toggle HeaderNavlink" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+	          	<img alt="@adiyani17a" class="avatar float-left" src="https://avatars1.githubusercontent.com/u/37235189?s=40&amp;v=4" height="20" width="20" >
+	          	<span class="caret"></span>
+	          </a>
 	          <ul class="dropdown-menu">
 	            <li><a href="#">Action</a></li>
 	            <li><a href="#">Another action</a></li>
@@ -77,11 +80,11 @@
 				<div class="col-sm-4 pt-2">
 					<div class="col-sm-12">
 						<a itemprop="image" class="u-photo d-block position-relative" aria-hidden="true" href="https://avatars3.githubusercontent.com/u/4925655?s=400&amp;v=4">
-							<img alt="" width="100%" height="100%" class="avatar width-full rounded-2" src="{{ $user_detail->avatar_url }}">
+							<img alt="" width="100%" height="100%" class="avatar width-full" src="{{ $user_detail->avatar_url }}" style="border-radius: 5%">
 						</a>
 					</div>
 					<div class="col-sm-12 mb-2">
-						<h1><span>{{ $user_detail->name }}</span></h1>
+						<h2>{{ $user_detail->name }}</h2>
 						<span class="grey">{{ $user_detail->login }}</span>
 					</div>
 					<div class="col-sm-12 mb-2">
@@ -220,9 +223,9 @@
 					<li><a data-ga-click="Footer, go to help, text:help" href="https://help.github.com">Help</a></li>
 				</ul>
 				<div class="d-inline m-auto">
-					<img src="{{ asset('assets/images/git.png') }}" width="20" height="20">
+					<img src="{{ asset('assets/images/git.png') }}" width="30" height="30">
 				</div>
-				<ul class="d-inline none pull-right" style="display: inline">
+				<ul class="d-inline none pull-right" style="display: inline;margin-top: 5px">
 			        <li class="mr-1"><a data-ga-click="Footer, go to contact, text:contact" href="https://github.com/contact">Contact GitHub</a></li>
 			      	<li class="mr-1"><a href="https://developer.github.com" data-ga-click="Footer, go to api, text:api">API</a></li>
 			      	<li class="mr-1"><a href="https://training.github.com" data-ga-click="Footer, go to training, text:training">Training</a></li>

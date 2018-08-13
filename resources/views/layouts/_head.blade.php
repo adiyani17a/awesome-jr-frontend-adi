@@ -166,6 +166,9 @@
 	.github{
 		fill: white;
 	}
+	.github-grey{
+		fill: grey;
+	}
 	.grey-input{
 		background-color: #8888;
 	}
