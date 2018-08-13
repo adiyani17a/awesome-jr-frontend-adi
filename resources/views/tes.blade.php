@@ -150,7 +150,8 @@
 			            <div class="col-sm-14 nopadding">
 			            	@foreach($user_repo as $i=>$val)
 			            		@if ($i <= 3)
-			            			@if($i+1 % 2 != 0)
+			            			@if( ($i+1) % 2 != 0)
+
 			            			<div class="col-sm-6 nopadding-left ">
 					            		<div class="col-sm-14 border-black box-git nopadding-left  mb-2 ">
 					            			<div class="mt-1  mb-1 col-sm-12 nopadding-left">
@@ -164,28 +165,30 @@
 					            			<div class="col-sm-12">
 					            				<span class="d-inline-block mr-2"><i class="fa fa-cog" style="color: orange"></i> {{ $val->language }}</span>
 					            				<a href="{{ $val->stargazers_url }}" class="d-inline-block grey mr-2"><i class="fa fa-star "></i>{{ $val->stargazers_count }}</a>
-					            				<a href="{{ $val->contributors_url }} " class="pinned-repo-meta muted-link">
-									              <i class="fa fa-circle-o-notch">{{ $val->watchers_count }}</i>
+					            				<a href="{{ $val->contributors_url }} " class="d-inline-block grey mr-2">
+									              <i class="fa fa-circle" style="color: green"></i>
+									              {{ $val->watchers_count }}
 									            </a>
 					            			</div>
 					            		</div>
 					            	</div>
-					            	@else
+					            	@elseif( ($i+1) % 2 == 0)
 					            	<div class="col-sm-6 nopadding-right ">
 					            		<div class="col-sm-14 border-black box-git nopadding-left  mb-2 ">
 					            			<div class="mt-1 mb-1 col-sm-12 nopadding-left">
 					            				<a href="{{ $val->html_url }}" class="text-bold mt-2 ml-2">
-										          	<span class="repo js-repo" title="mailchimp-nodejs">{{ $val->name }}</span>
+										          	<span class="repo js-repo" title="mailchimp-nodejs"><b>{{ $val->name }}</b></span>
 										        </a>
 					            			</div>
 									        <div class="mb-2 col-sm-12 nopadding-left middle">
 									        	<p class="pinned-repo-desc text-gray text-small d-block  ml-2 font-small">{{$val->description}}</p>
 					            			</div>
 					            			<div class="col-sm-12">
-					            				<span class="d-inline-block mr-2"><i class="fa fa-cog" style="color: orange"></i> {{ $val->language }}</span>
+					            				<span class="d-inline-block mr-2"><i class="fa fa-cog" style="color: red"></i> {{ $val->language }}</span>
 					            				<a href="{{ $val->stargazers_url }}" class="d-inline-block grey mr-2"><i class="fa fa-star "></i>{{ $val->stargazers_count }}</a>
-					            				<a href="{{ $val->contributors_url }} " class="pinned-repo-meta muted-link">
-									              <i class="fa fa-circle-o-notch">{{ $val->watchers_count }}</i>
+					            				<a href="{{ $val->contributors_url }} " class="d-inline-block grey mr-2">
+									              <i class="fa fa-circle" style="color: green"></i>
+									              {{ $val->watchers_count }}
 									            </a>
 					            			</div>
 					            		</div>
