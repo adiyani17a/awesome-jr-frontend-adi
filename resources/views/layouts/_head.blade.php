@@ -303,4 +303,7 @@
 	.font-small{
 		font-size: 12px;
 	}
+	.middle{
+		height: 47px;
+	}
 </style>
