@@ -3,138 +3,6 @@
 <head>
     @include('layouts._head')
 	<title></title>
-	<style type="text/css">
-		body { 
-			background-color: white !important;
-		}
-		.black{
-			background: #24292e;
-		}
-		.header-logo-invertocat{
-			background: white;
-		}
-		.github{
-			background-image: url() no-repeat;
-		}
-		.grey-input{
-			background-color: #8888;
-		}
-		.input-container{
-			width: 30%;
-			padding-top: 5px;
-			position: relative;
-		}
-		.HeaderNavlink{
-			margin-top: 13px !important;
-		}
-		.navbar-nav li .HeaderNavlink:hover{
-			color: #9999 !important;
-		}
-		.navbar-nav  li  .HeaderNavlink{
-			color: #fff!important;
-		}
-		.container{
-			width: 1000px;
-		}
-		.pl-2{
-
-		}
-		.navbar-nav{
-			display: flex;
-		}
-		.white {
-		  -webkit-filter: opacity(.8) drop-shadow(0 0 0 white);
-  		  filter: opacity(.8) drop-shadow(0 0 0 white);
-		}
-		.bell{
-			margin-top: 13px !important;
-		}
-		.green{
-			background:green;
-		}
-		.blue{
-			background:blue;
-		}
-		.yellow{
-			background:yellow;
-		}
-		.block{
-			width: 100%;
-			height: 500px;
-		}
-		.container-content{
-			width: 100%;
-			height: 55px;
-		}
-		.pt-2{
-			padding-top: 20px;
-		}
-		.pl-2{
-			padding-top: 20px;
-		}
-		
-		.width-20{
-			width: 20%;
-		}
-		.border-black{
-			border:1px solid #9999;
-		}
-		.box-git{
-			width: 100%;
-			height: 133px;
-		}
-		.nopadding-right {
-		   padding-right: 0 !important;
-		   margin-right: 0 !important;
-		}
-
-		.nopadding-left {
-		   padding-left: 0 !important;
-		   margin-left: 0 !important;
-		}
-		.mt-1{
-			margin-top: 10px !important;
-		}
-		.mt-2{
-			margin-top: 20px !important;
-		}
-		.mb-2{
-			margin-bottom: 20px !important;
-		}
-		.mr-1{
-			margin-right: 10px !important;
-		}
-		.mr-2{
-			margin-right: 20px !important;
-		}
-		.ml-2{
-			margin-left: 20px !important;
-		}
-		.grey{
-			color: grey;
-		}
-		.width-100{
-			width: 100%;
-		}
-		.none{
-			text-decoration: none;
-			list-style-type: none;
-		}
-		.d-inline-block{
-			display: inline-block;
-			vertical-align: middle;
-		}
-		.d-inline{
-			display: inline;
-			vertical-align: middle;
-		}
-		.d-inline li{
-			display: inline;
-		}
-		.m-auto{
-			margin: auto;
-		}
-	</style>
 </head>
 <body>
 	<nav class="navbar navbar-default black" >
@@ -250,64 +118,49 @@
 				<div class="col-sm-8 pt-2">
 					<ul class="nav nav-tabs">
 			          <li class="active width-20"><a class="" data-toggle="tab" href="#overview">Overview</a></li>
-			          <li class="width-20"><a class="" data-toggle="tab" href="#">Repositories <span class="badge badge-pill">{{ $user_detail->public_repos }}</span></a></li>
-			          <li class="width-20"><a class="" data-toggle="tab" href="#">Stars <span class="badge badge-pill">{{ $user_detail->public_gists }}</span></a></li>
-			          <li class="width-20"><a class="" data-toggle="tab" href="#">Followers  <span class="badge badge-pill">{{ $user_detail->followers }}</span></a></li>
-			          <li class="width-20"><a class="" data-toggle="tab" href="#">Following  <span class="badge badge-pill">{{ $user_detail->following }}</span></a></li>
+			          <li class="width-20">
+			          	<a class="" data-toggle="tab" href="#">Repositories&nbsp;<span class="badge badge-pill">{{ $user_detail->public_repos }}</span>
+			          	</a>
+			          </li>
+			          <li class="width-20">
+			          	<a class="" data-toggle="tab" href="#">Stars&nbsp;<span class="badge badge-pill">{{ $user_detail->public_gists }}</span>
+			          	</a>
+			          </li>
+			          <li class="width-20">
+			          	<a class="" data-toggle="tab" href="#">Followers&nbsp;<span class="badge badge-pill">{{ $user_detail->followers }}</span>
+			          	</a>
+			          </li>
+			          <li class="width-20">
+			          	<a class="" data-toggle="tab" href="#">Following&nbsp;<span class="badge badge-pill">{{ $user_detail->following }}</span>
+			          	</a>
+			          </li>
 			        </ul>
 					<div class="tab-content"  >
 			          <div id="overview" class="tab-pane fade in active">
 			            <p class="">Pinned Repositories</p>
 			            <div class="col-sm-14 nopadding">
 			            	@foreach($user_repo as $i=>$val)
-			            		@if ($i <= 1)
+			            		@if ($i <= 3)
 			            			@if($i+1 % 2 != 0)
 			            			<div class="col-sm-6 nopadding-left ">
-					            		<div class="col-sm-14 border-black box-git nopadding-left  mb-2">
+					            		<div class="col-sm-14 border-black box-git nopadding-left  mb-2 ">
 					            			<div class="mt-2">
-					            				<a href="{{ $val->html_url }}" class="text-bold mt-2">
+					            				<a href="{{ $val->html_url }}" class="text-bold mt-2 ml-2">
 										          	<span class="repo js-repo" title="mailchimp-nodejs">{{ $val->name }}</span>
 										        </a>
 					            			</div>
-									        <p class="pinned-repo-desc text-gray text-small d-block mt-2 mb-3">{{$val->description}}</p>
+									        <p class="pinned-repo-desc text-gray text-small d-block mt-2 mb-3 ml-2 font-small">{{$val->description}}</p>
 					            		</div>
 					            	</div>
 					            	@else
 					            	<div class="col-sm-6 nopadding-right ">
-					            		<div class="col-sm-14 border-black box-git nopadding-left  mb-2">
+					            		<div class="col-sm-14 border-black box-git nopadding-left  mb-2 ">
 					            			<div class="mt-2">
-					            				<a href="{{ $val->html_url }}" class="text-bold mt-2">
+					            				<a href="{{ $val->html_url }}" class="text-bold mt-2 ml-2">
 										          	<span class="repo js-repo" title="mailchimp-nodejs">{{ $val->name }}</span>
 										        </a>
 					            			</div>
-									        <p class="pinned-repo-desc text-gray text-small d-block mt-2 mb-3">{{$val->description}}</p>
-					            		</div>
-					            	</div>
-					            	@endif
-			            		@endif
-				            @endforeach
-			            	@foreach($user_repo as $i=>$val)
-			            		@if ($i > 1 and $i <=3)
-			            			@if($i+1 % 2 != 0)
-			            			<div class="col-sm-6 nopadding-left ">
-					            		<div class="col-sm-14 border-black box-git nopadding-left  mb-2">
-					            			<div class="mt-2">
-					            				<a href="{{ $val->html_url }}" class="text-bold mt-2">
-										          	<span class="repo js-repo" title="mailchimp-nodejs">{{ $val->name }}</span>
-										        </a>
-					            			</div>
-									        <p class="pinned-repo-desc text-gray text-small d-block mt-2 mb-3">{{$val->description}}</p>
-					            		</div>
-					            	</div>
-					            	@else
-					            	<div class="col-sm-6 nopadding-right ">
-					            		<div class="col-sm-14 border-black box-git nopadding-left  mb-2">
-									          <div class="mt-2">
-					            				<a href="{{ $val->html_url }}" class="text-bold mt-2">
-										          	<span class="repo js-repo" title="mailchimp-nodejs">{{ $val->name }}</span>
-										        </a>
-					            			</div>
-									        <p class="pinned-repo-desc text-gray text-small d-block mt-2 mb-3">{{$val->description}}</p>
+									        <p class="pinned-repo-desc text-gray text-small d-block mt-2 mb-3 ml-2 font-small">{{$val->description}}</p>
 					            		</div>
 					            	</div>
 					            	@endif

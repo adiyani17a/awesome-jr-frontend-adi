@@ -153,4 +153,148 @@
 	.uppercase{
         text-transform: uppercase;
     }
+
+    body { 
+		background-color: white !important;
+	}
+	.black{
+		background: #24292e;
+	}
+	.header-logo-invertocat{
+		background: white;
+	}
+	.github{
+		background-image: url() no-repeat;
+	}
+	.grey-input{
+		background-color: #8888;
+	}
+	.input-container{
+		width: 30%;
+		padding-top: 5px;
+		position: relative;
+	}
+	.HeaderNavlink{
+		margin-top: 13px !important;
+	}
+	.navbar-nav li .HeaderNavlink:hover{
+		color: #9999 !important;
+	}
+	.navbar-nav  li  .HeaderNavlink{
+		color: #fff!important;
+	}
+	.container{
+		width: 1000px;
+	}
+	.pl-2{
+
+	}
+	.navbar-nav{
+		display: flex;
+	}
+	.white {
+	  -webkit-filter: opacity(.8) drop-shadow(0 0 0 white);
+		  filter: opacity(.8) drop-shadow(0 0 0 white);
+	}
+	.bell{
+		margin-top: 13px !important;
+	}
+	.green{
+		background:green;
+	}
+	.blue{
+		background:blue;
+	}
+	.yellow{
+		background:yellow;
+	}
+	.block{
+		width: 100%;
+		height: 500px;
+	}
+	.container-content{
+		width: 100%;
+		height: 55px;
+	}
+	.pt-2{
+		padding-top: 20px;
+	}
+	.pl-2{
+		padding-top: 20px;
+	}
+	.width-10{
+		width: 10%;
+	}
+	.width-20{
+		width: 20%;
+	}
+	.border-black{
+		border:1px solid #9999;
+	}
+	.box-git{
+		width: 100%;
+		height: 133px;
+	}
+	.nopadding-right {
+	   padding-right: 0 !important;
+	   margin-right: 0 !important;
+	}
+
+	.nopadding-left {
+	   padding-left: 0 !important;
+	   margin-left: 0 !important;
+	}
+	.mt-1{
+		margin-top: 10px !important;
+	}
+	.mt-2{
+		margin-top: 20px !important;
+	}
+	.mb-2{
+		margin-bottom: 20px !important;
+	}
+	.mr-1{
+		margin-right: 10px !important;
+	}
+	.mr-2{
+		margin-right: 20px !important;
+	}
+	.ml-1{
+		margin-left: 10px !important;
+	}
+	.ml-2{
+		margin-left: 20px !important;
+	}
+	.grey{
+		color: grey;
+	}
+	.width-100{
+		width: 100%;
+	}
+	.none{
+		text-decoration: none;
+		list-style-type: none;
+	}
+	.d-inline-block{
+		display: inline-block;
+		vertical-align: middle;
+	}
+	.d-inline{
+		display: inline;
+		vertical-align: middle;
+	}
+	.d-inline li{
+		display: inline;
+	}
+	.m-auto{
+		margin: auto;
+	}
+	.nav-tabs li a{
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+		text-align: center !important;
+	}
+	.font-small{
+		font-size: 12px;
+	}
 </style>
